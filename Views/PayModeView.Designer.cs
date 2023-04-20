@@ -276,7 +276,7 @@
             // BtnCancel
             // 
             BtnCancel.Image = (Image)resources.GetObject("BtnCancel.Image");
-            BtnCancel.Location = new Point(463, 168);
+            BtnCancel.Location = new Point(463, 180);
             BtnCancel.Name = "BtnCancel";
             BtnCancel.Size = new Size(267, 92);
             BtnCancel.TabIndex = 7;
