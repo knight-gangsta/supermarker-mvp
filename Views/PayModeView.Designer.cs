@@ -179,6 +179,7 @@
             // 
             // BtnSearch
             // 
+            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = (Image)resources.GetObject("BtnSearch.Image");
             BtnSearch.Location = new Point(440, 25);
             BtnSearch.Name = "BtnSearch";
@@ -280,8 +281,11 @@
             // 
             TxtPayModeId.Location = new Point(36, 45);
             TxtPayModeId.Name = "TxtPayModeId";
+            TxtPayModeId.ReadOnly = true;
             TxtPayModeId.Size = new Size(309, 23);
             TxtPayModeId.TabIndex = 1;
+            TxtPayModeId.Text = "0";
+            TxtPayModeId.TextAlign = HorizontalAlignment.Right;
             TxtPayModeId.TextChanged += textBox1_TextChanged;
             // 
             // label3
