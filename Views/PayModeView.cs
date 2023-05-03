@@ -25,6 +25,7 @@ namespace Supermarket_mvp.Views
             AssociateAndRaiseViewEvents();
 
             tabControl1.TabPages.Remove(tabPagePayModeDetail);
+            BtnClose.Click += delegate { this.Close(); };
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -113,26 +114,42 @@ namespace Supermarket_mvp.Views
 
         private static PayModeView instance;
 
-        public static PayModeView GetInstance() 
+        public static PayModeView GetInstance(Form parentContainer)
         {
             if (instance == null || instance.IsDisposed)
-          {
-                instance = new PayModeView(); 
-          }
+            {
+                instance = new PayModeView();
+                instance.MdiParent = parentContainer;
 
-          else 
-            { 
-            if (instance.WindowState == FormWindowState.Minimized)
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+            }
+
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
                 {
                     instance.WindowState = FormWindowState.Normal;
                 }
-            instance.BringToFront();
+                instance.BringToFront();
             }
-          return instance;
+            return instance;
+        }
+
+        private void tabPagePayModeList_Click(object sender, EventArgs e)
+        {
 
         }
 
-        internal class GetInstance : IPayModeView
+        private void BtnNew_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
         {
         }
     }

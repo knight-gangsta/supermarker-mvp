@@ -120,18 +120,22 @@
             tabPagePayModeList.TabIndex = 0;
             tabPagePayModeList.Text = "Pay Mode List";
             tabPagePayModeList.UseVisualStyleBackColor = true;
+            tabPagePayModeList.Click += tabPagePayModeList_Click;
             // 
             // BtnClose
             // 
+            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnClose.Image = (Image)resources.GetObject("BtnClose.Image");
             BtnClose.Location = new Point(638, 185);
             BtnClose.Name = "BtnClose";
             BtnClose.Size = new Size(70, 90);
             BtnClose.TabIndex = 7;
             BtnClose.UseVisualStyleBackColor = true;
+            BtnClose.Click += BtnClose_Click;
             // 
             // BtnDelete
             // 
+            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnDelete.Image = (Image)resources.GetObject("BtnDelete.Image");
             BtnDelete.Location = new Point(542, 185);
             BtnDelete.Name = "BtnDelete";
@@ -142,24 +146,29 @@
             // 
             // BtnEdit
             // 
+            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnEdit.Image = (Image)resources.GetObject("BtnEdit.Image");
             BtnEdit.Location = new Point(638, 92);
             BtnEdit.Name = "BtnEdit";
             BtnEdit.Size = new Size(70, 87);
             BtnEdit.TabIndex = 5;
             BtnEdit.UseVisualStyleBackColor = true;
+            BtnEdit.Click += BtnEdit_Click;
             // 
             // BtnNew
             // 
+            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnNew.Image = (Image)resources.GetObject("BtnNew.Image");
             BtnNew.Location = new Point(542, 89);
             BtnNew.Name = "BtnNew";
             BtnNew.Size = new Size(70, 90);
             BtnNew.TabIndex = 4;
             BtnNew.UseVisualStyleBackColor = true;
+            BtnNew.Click += BtnNew_Click;
             // 
             // DgPayMode
             // 
+            DgPayMode.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             DgPayMode.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgPayMode.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgPayMode.Location = new Point(20, 73);
@@ -179,6 +188,7 @@
             // 
             // TxtSearch
             // 
+            TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtSearch.Location = new Point(20, 35);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Data to Search";
